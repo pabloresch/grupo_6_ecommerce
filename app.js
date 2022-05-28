@@ -14,6 +14,22 @@ app.listen(port, () => {
 
 
 //>montar rutas 
+//productos
+const productRoutes = require ('./routes/productRoutes')
+app.use('/productos',productRoutes)
+/*
+//main
+const mainRoutes = require ('./routes/mainRoutes')
+app.use('/',mainRoutes)
+
+//usuarios
+const usersRoutes = require ('./routes/usersRoutes')
+app.use('/usuarios',usersRoutes)
+
+*/
+
+
+
 
 // views
 const views = path.join(__dirname, 'views/')
@@ -28,8 +44,8 @@ const httpLogIn = '/login'
 const httpProducto = '/productDetail'
 
 // html
-const homeHtml = 'home.html'
-const carritoHtml = 'carrito.html'
+const homeHtml = 'index.html'
+const carritoHtml = 'productCart.html'
 const loginHtml ='login.html'
 const productoHtml = 'productDetail.html'
 
@@ -45,10 +61,6 @@ app.get(htppHome, (req, res) => {
     res.sendFile(path.join(views, homeHtml))
 })
 
-app.get(httpCarrito, (req, res) => {
-    res.sendFile(path.join(views, carritoHtml))
-})
-
 app.get(httpLogIn, (req, res) => {
     res.sendFile(path.join(views, loginHtml))
 })
@@ -56,3 +68,9 @@ app.get(httpLogIn, (req, res) => {
 app.get(httpProducto, (req, res) => {
     res.sendFile(path.join(views, productoHtml))
 })
+
+app.get(httpCarrito, (req, res) => {
+    res.sendFile(path.join(views, carritoHtml))
+})
+
+
