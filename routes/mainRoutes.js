@@ -1,16 +1,13 @@
 const express = require ('express');
 const router = express.Router();
-
-/*
-router.get("/", (req, res) => {
-    res.sendFile(path.join(views, "index.html"))
-})
-
-router.get("/home", (req, res) => {
-    res.sendFile(path.join(views, "index.html"))
-})
+const mainControllers = require ('../controllers/mainControllers')
 
 
-*/
+
+
+router.get("/", mainControllers.index)
+
+router.get("/home", mainControllers.index )
+
 
 module.exports =router

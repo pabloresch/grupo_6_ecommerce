@@ -1,11 +1,11 @@
 const express = require ('express');
 const router = express.Router();
+const usersControllers = require('../controllers/usersControllers')
 
-/*
-router.get("/login", (req, res) => {
-    res.sendFile(path.join(views, "login.html"))
-})
-*/
+
+router.get("/login",usersControllers.logIn)
+
+
 
 
 module.exports =router
