@@ -16,7 +16,11 @@ app.listen(port, () => {
 //>montar rutas 
 //productos
 const productRoutes = require ('./routes/productRoutes')
-app.use('/productos',productRoutes)
+app.use('/productos', productRoutes)
+app.use('/carrito', productRoutes)
+app.use('/productDetail', productRoutes)
+
+
 /*
 //main
 const mainRoutes = require ('./routes/mainRoutes')
@@ -39,16 +43,15 @@ const public = path.join(__dirname, 'public/')
 // hhtp routes
 const hhtpRaiz = '/'
 const htppHome = '/home'
-const httpCarrito = '/carrito'
 const httpLogIn = '/login'
-const httpProducto = '/productDetail'
+/*const httpProducto = '/productDetail'
+const httpCarrito = '/carrito'*/
 
 // html
 const homeHtml = 'index.html'
-const carritoHtml = 'productCart.html'
 const loginHtml ='login.html'
-const productoHtml = 'productDetail.html'
-
+/*const productoHtml = 'productDetail.html'
+const carritoHtml = 'productCart.html'*/
 
 // Define the static file path
 app.use(express.static(__dirname +'/public/'));
@@ -65,12 +68,12 @@ app.get(httpLogIn, (req, res) => {
     res.sendFile(path.join(views, loginHtml))
 })
 
-app.get(httpProducto, (req, res) => {
+/*app.get(httpProducto, (req, res) => {
     res.sendFile(path.join(views, productoHtml))
-})
+})*/
 
-app.get(httpCarrito, (req, res) => {
+/*app.get(httpCarrito, (req, res) => {
     res.sendFile(path.join(views, carritoHtml))
-})
+})*/
 
 
