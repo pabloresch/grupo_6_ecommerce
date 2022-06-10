@@ -965,7 +965,19 @@ margin-bottom: 20px;
 .newProductLabel {
     margin-bottom: 25px;
 }
-
+.newProductDescriptionInput{
+    width: 90%;
+    height: 20vh;
+    padding: 12px 20px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 2px solid beige;
+    opacity: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #000000;
+    display: flex;
+    text-align: left;
+}
 .newProductInput {
     width: 90%;
     height: 5vh;

@@ -12,30 +12,31 @@
         <main class="main-productDetail">
 
             <section class="titulo">                
-                <h2>Moto E7 Plus</h2>                
+                <h2><%= detailProduct.name %></h2>
+                <h2><%= detailProduct.marca %></h2>                 
             </section>
 
             <section class="product">
 
                 <div class="fotos">
                     <article>
-                        <div class="img-div fotoPincipal "><img src="images/Celulares/1.jpg" alt="foto Moto e7"></div>                    
-                        <div class="fotosSecundarias">
+                        <div class="img-div fotoPincipal "><img src="images/products/<%= detailProduct.image %>" alt="foto <%= detailProduct.name %>"></div>                    
+                        <!--div class="fotosSecundarias">
                             <div class="img-div"><img src="images/Celulares/1.jpg" alt="foto Moto e7"></div>
                             <div class="img-div"><img src="images/Celulares/2.jpg" alt="foto Moto e7"></div>
                             <div class="img-div"><img src="images/Celulares/3.jpg" alt="foto Moto e7"></div>
                             <div class="img-div"><img src="images/Celulares/4.jpg" alt="foto Moto e7"></div>
                             <div class="img-div"><img src="images/Celulares/5.png" alt="foto Moto e7"></div>
                             <div class="img-div"><img src="images/Celulares/6.jpg" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/7.jpg" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/Celulares/7.jpg" alt="foto Moto e7"></div-->
                         </div>                    
                     </article>                  
                 </div>
 
                 <div class="precio"> 
                     <article class="color-green precio">
-                        <h2 class="fotos">$65.500</h2>
-                        <h2 class="fotos">en 12x $ 9.288,45</h2>
+                        <h2 class="fotos"><%= detailProduct.price %></h2>
+                        <!--h2 class="fotos">en 12x $ 9.288,45</h2-->
                         <a class="color-blanco" href="#">Ver todos los medios de pago</a>
                     </article>
                     <article class="comprar">
@@ -46,71 +47,13 @@
                 </div>
 
                 <article class="caracteristicas">
-                    <div>
-                        <h3>General</h3>
+                    
+                        <h3>descripcion</h3>
                         <div class="primero">
-                            <h4>Marca</h4>
-                            <h4>Motorola</h4>
+                            <%= detailProduct.description %>
                         </div>
-                        <div class="segundo">
-                            <h4>Línea</h4>
-                            <h4>Moto E</h4>
-                        </div>
-                            <div class="tercero">
-                                <h4>Modelo</h4>
-                                <h4>E7 Plus</h4>
-                            </div>
-                    </div>
-
-                    <div>
-                        <h3>Pantalla</h3>
-                        <div class="primero">
-                            <h4>Tamaño</h4>
-                            <h4>6.5 "</h4>
-                        </div>
-                        <div class="segundo">
-                            <h4>Resolución</h4>
-                            <h4>720 px x 1600 px</h4>
-                        </div>
-                        <div class="tercero">
-                            <h4>Tecnología </h4>
-                            <h4>IPS</h4>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>Memoria</h3>
-                        <div class="primero">
-                            <h4>Memoria interna</h4>
-                            <h4>64 GB</h4>
-                        </div>
-                        <div class="segundo">
-                            <h4>Memoria RAM</h4>
-                            <h4>4 GB</h4>
-                        </div>
-                        <div class="tercero">
-                            <h4>Tipos de tarjeta</h4>
-                            <h4>MicroSD</h4>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>Procesador</h3>
-                        <div class="primero">
-                        <h4>Modelo</h4>
-                            <h4>Snapdragon 460</h4>
-                        </div>
-                        <div class="segundo">                       
-                            <h4>Cantidad de núcleos</h4>
-                            <h4>8</h4>
-                        </div>
-                        <div class="tercero">                            
-                            <h4>Velocidad</h4>
-                            <h4>1.8 GHz</h4>
-                        </div>
-                    </div>
-
-                </div>
+                   
+                </article>
             </section>
 
             <section class="whatsapp">                    
