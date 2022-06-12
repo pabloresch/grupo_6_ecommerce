@@ -440,6 +440,30 @@ div.fotos article{
 }
 
 /*>>>boton comprar<<*/
+.botones {
+    display: flex;
+    margin: 2px;
+    padding: 2px;
+    width: 90%;
+    justify-content: center;
+    
+}
+
+.icon-edit-delet {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 20%;
+}
+
+
+
+.delete-btn {
+    width: 100px;
+    color: #4D4C7D;
+}
+
 .buy-btn {
     background-color: #827397;
     border: solid 1px;
@@ -479,28 +503,18 @@ div.fotos article{
     flex-direction: column;
 }
 
-.primero{
+.description {
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: justify;
     border: 2px  solid #4D4C7D;
 }
-.segundo{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border-left: 2px solid #4D4C7D;
-    border-right: 2px solid #4D4C7D;
+
+.colorRed {
+    color: rgb(255, 0,0 );
 }
-.tercero{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border: 2px solid #4D4C7D;
-}
+
 /* FIN PRODUCT DETAIL */
 
 /* MAIN - LOGIN - REGISTRO*/
