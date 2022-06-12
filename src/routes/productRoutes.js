@@ -23,7 +23,7 @@ const productControllers = require ('../controllers/productControllers')
 
 router.get("/productCart", productControllers.carrito );
 
-router.get("/listPhones", productControllers.listaCelulares );
+//(listado de celulares todavia no esta definido el metodo y no levanta el servidor)router.get("/listPhones", productControllers.listaCelulares ); 
 
 /*** GET ONE PRODUCT ***/
 //router.get("/:id", productControllers.detail);
@@ -32,6 +32,11 @@ router.get("/detail/:id", productControllers.detail );
 /*** CREATE ONE PRODUCT ***/
 router.get('/newProduct', productControllers.newProduct)
 router.post("/", upload.single("imgFile"), productControllers.store);
+
+/*** EDIT ONE PRODUCT ***/
+
+router.get("/edit/:id", productControllers.edit);
+router.put("/edit/:id", productControllers.update);
 
 module.exports =router
 

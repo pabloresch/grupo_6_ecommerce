@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('./partials/head') %>
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+<body>
+    <main>
+        <section class="newProductSection">
+            <form action="/product/edit/<%= editProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="newProductForm">
+                <div class="titleNewProduct"><h4>Estas editando el producto:<%= editProduct.name %></h4></div>
+                <label for="name" class="newProductLabel">
+                    <input type="text" name="name" class="newProductInput" placeholder="Ej. Galaxy S22">
+                </label>
+                <div class="titleNewProduct"><h4>Descripción</h4></div>
+                <label for="description" class="newProductLabel">
+                    <textarea name="description" class="newProductDescriptionInput" placeholder="Ej. 8gb de Ram"></textarea>
+                </label>
+                <div class="titleNewProduct"><h4>Ingrese las imágenes</h4></div>
+                <label for="images" class="newProductLabel">
+                    <input type="file" name="images" accept=".jpg" multiple>
+                </label>
+                <div class="titleNewProduct"><h4>Categoría</h4></div>
+                <label for="category" class="newProductLabel">
+                    <div class="categoryContainer"><input type="radio" name="category" value="Cellphone"> <h6>Celular</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="category" value="Tablet"> <h6>Tablet</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="category" value="Laptop"> <h6>Laptop</h6></div>
+                </label>
+                <div class="titleNewProduct"><h4>Marca</h4></div>
+                <label for="brand" class="newProductLabel">
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Cellphone"> <h6>Iphone</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Tablet"> <h6>Samsung</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Laptop"> <h6>Motorola</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Laptop"> <h6>Huawei</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Laptop"> <h6>OnePlus</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Laptop"> <h6>Xiaomi</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Laptop"> <h6>Otra</h6></div>
+                </label>
+                <div class="titleNewProduct"><h4>Precio en USD$</h4></div>
+                <label for="price" class="newProductLabel">
+                    <input type="number" name="price" class="newProductInput" min="1">
+                </label>
+                <input  class='submit-login' type="submit" value="Ingresar producto">
+                <br>
+            </form>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+</body>
+</html>
