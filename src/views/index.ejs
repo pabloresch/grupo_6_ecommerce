@@ -153,13 +153,14 @@
       <section class="section-set-display seccion04">
         <% for (i = 0; i < 4; i++) { %> 
           <article class="article-style <%= article[i] %>">
+            
             <div class="imgProduct">
               <img
                 src="images/products/<%= laptops[i].image %>"
                 alt="Iphone 13 Pro Max"
               />
             </div>
-  
+            
             <div class="descriptionProduct">  
               <div class="title">
                 <h5><%= laptops[i].name %></h5>
@@ -172,6 +173,7 @@
                 <h6>Envío gratis</h6>
               </div>
             </div>
+            
           </article>
           <% } %>
       </section>

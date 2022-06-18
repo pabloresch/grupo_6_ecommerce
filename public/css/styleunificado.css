@@ -1,4 +1,9 @@
-/*se importa la tipografía Roboto y Raleway de google fonts */
+/*se importa la tipografía Roboto y Raleway de google fonts 
+
+imgProduct revisar la propiedad comentada
+
+
+*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
 
 * {
@@ -337,7 +342,7 @@ h2{
     .descriptionProduct .title {
         text-align: center;
         color: rgba(0, 0, 0, 0.7);
-        height: 20px;
+        /*height: 20px;*/
         margin-bottom: 10px;
     }
     
@@ -360,9 +365,10 @@ h2{
     }
     
     .imgProduct img {
-            width: 100%;
-            height: auto;
-        }
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 
 /* FIN HOME */
 
@@ -1170,8 +1176,12 @@ margin-bottom: 20px;
             .carrusel {
                 margin-top: 160px;
             }
+            .article01 {
+                width: 50%;
+            }
             .article02 {
                     display: block;
+                    width: 50%;
                 }
         
             .article-style {
@@ -1265,6 +1275,10 @@ margin-bottom: 20px;
     /* HOME */
     .article03, .article04 {
         display: block;
+    
+    }
+    .article01, .article02, .article03, .article04 {
+        width: 25%;
     
     }
     .carrusel {
